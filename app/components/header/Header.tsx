@@ -12,11 +12,11 @@ const Header: React.FC = () => {
     { label: "PHOTO + REVIEWS", href: "/photo-reviews" },
   ];
   return (
-    <header className="bg-[#2E332A] text-white fixed top-0 w-full z-50 shadow-md ">
+    <header className="bg-[#2E332A] text-white fixed top-0 w-full z-50 shadow-md h-[76px]">
       <div className="flex items-center justify-between px-6 py-5 ">
         {/* Logo Section */}
         <div className="relative">
-          <div className="absolute -top-8  bg-[#1E1E1E] rounded-[0%_0%_0%_44%/25%_25%_25%_25%] h-[156px] w-[138px] flex items-center justify-center ">
+          <div className="absolute -top-10  bg-[#1E1E1E] rounded-[0%_0%_0%_44%/25%_25%_25%_25%] h-[156px] w-[138px] flex items-center justify-center ">
             <Image src={Logo} alt="Logo" width={79} height={79} />
           </div>
         </div>

@@ -7,7 +7,7 @@ const FeedbackWidget: React.FC = () => {
         <div>
           <CiUser size={22} />
         </div>
-        <div className=""> Feedback</div>
+        <div> Feedback</div>
       </div>
     </div>
   );

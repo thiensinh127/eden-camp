@@ -7,9 +7,9 @@ import Header from "./components/header/Header";
 
 const HomePage: React.FC = () => {
   return (
-    <div className="h-screen flex flex-col">
+    <div>
       <Header />
-      <main className="flex-1 relative top-[64px]">
+      <main>
         <HeroSection />
         <BookingSection />
       </main>

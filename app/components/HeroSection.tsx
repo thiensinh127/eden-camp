@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
-import Image1 from "@/public/images/background1.png";
-import Image2 from "@/public/images/background2.png";
-import Image3 from "@/public/images/background3.png";
+import Image1 from "@/public/images/camp1.jpg";
+import Image2 from "@/public/images/camp2.jpg";
+import Image3 from "@/public/images/camp3.jpg";
+import Image4 from "@/public/images/camp4.jpg";
+import Image5 from "@/public/images/camp5.jpg";
+
 import Image from "next/image";
 const HeroSection: React.FC = () => {
   const settings = {
@@ -15,24 +18,39 @@ const HeroSection: React.FC = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    customPaging: () => <div className="w-4 h-4 bg-white rounded-full mx-1" />,
+    customPaging: () => {
+      return <div className="w-4 h-4  rounded-full mx-1" />;
+    },
+    appendDots: (dots: any) => (
+      <div
+        style={{
+          position: "absolute",
+          bottom: "20px",
+          right: "20px",
+        }}
+      >
+        <ul className="flex space-x-2 justify-end">{dots}</ul>
+      </div>
+    ),
   };
 
   const images = [
     { src: Image1, alt: "Campfire" },
     { src: Image2, alt: "Tent" },
     { src: Image3, alt: "Forest" },
+    { src: Image4, alt: "Forest" },
+    { src: Image5, alt: "Forest" },
   ];
 
   return (
-    <section className="relative bg-gray-900 text-white ">
+    <section className="relative bg-gray-900 text-white pt-[76px]">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index}>
+          <div key={index} className="focus-visible:outline-none">
             <Image
               src={image.src}
               alt={image.alt}
-              className="w-full object-cover"
+              className="w-full object-cover max-h-[600px] "
             />
           </div>
         ))}

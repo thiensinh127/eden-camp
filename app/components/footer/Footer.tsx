@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Logo from "@/public/images/logo.png";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#2E332A] text-gray-400 py-8 h-[154px]">
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+        <Image src={Logo} alt="Logo" width={60} height={60} />
+
         <div>
           <h3 className="text-white font-bold mb-4">About Us</h3>
           <ul>
